@@ -1,19 +1,47 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="800" height="275" alt="Print do Portfólio" src="assets/images/print-portfolio.png" />
 </div>
 
-# Execute e faça o deploy do seu app AI Studio
+# Portfólio Pessoal - Antonio Junior dos Santos
 
-Este repositório contém tudo o que você precisa para rodar seu aplicativo localmente.
+> Um portfólio moderno desenvolvido em React + TypeScript para apresentar meus projetos, habilidades e informações de contato como desenvolvedor Full-Stack.
 
-Veja seu app no AI Studio: https://ai.studio/apps/temp/1
+## Sobre o Projeto
 
-## Executar Localmente
+Este projeto tem como objetivo centralizar e apresentar meus principais projetos, experiências e competências técnicas de forma visual e acessível. O portfólio é responsivo, com animações e navegação fluida, e pode ser facilmente adaptado para outros profissionais de tecnologia.
+
+### Principais Funcionalidades
+- Seção "Sobre mim" com resumo profissional
+- Listagem de projetos com links para repositórios e demonstrações
+- Exibição de habilidades técnicas separadas por categoria
+- Contatos e links para redes sociais
+
+## Tecnologias Utilizadas
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Node.js (para ambiente de desenvolvimento)
+
+## Como Executar Localmente
 
 **Pré-requisitos:** Node.js
 
 1. Instale as dependências:
-   `npm install`
-2. Defina a variável `GEMINI_API_KEY` no arquivo [.env.local](.env.local) com sua chave da API Gemini
-3. Execute o app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Execute o app:
+   ```bash
+   npm run dev
+   ```
+3. Acesse no navegador o endereço exibido no terminal (ex: http://localhost:5173)
+
+## Deploy
+
+O deploy deste portfólio é feito no GitHub Pages, disponível em:
+https://antonio-jdev.github.io/portfolio-01/
+
+## Licença
+
+Este projeto é open-source e pode ser utilizado e adaptado livremente.
