@@ -1,222 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Antonio Junior dos Santos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav-logo">Portifólio Antonio Junior dos Santos</a>
-            </div>
-
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Início</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portifólio</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="nav-toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="l-main">
-        <section class="home" id="home">
-            <div class="home-container bd-grid">
-                <h1 class="home-title"><span>Bem vindo(a)</span><br></h1>
-
-                <div class="home-scroll">
-                    <a href="#about" class="home-scroll-link"><i class='bx bx-up-arrow-alt' ></i>Rolar para baixo!</a>
-                </div>
-
-                <img src="./images/foto-p-cv-Photoroom.png" alt="Antonio Junior" class="home-img">
-            </div>
-        </section>
-    
-
-        <section class="about section" id="about">
-            <h2 class="section-title">Sobre</h2>
-
-            <div class="about-container bd-grid">
-                <div class="about-img">
-                    <img src="./images/foto_perfil_normal-removebg-preview.png" alt="Antonio image">
-                </div>
-
-                <div>
-                    <h2 class="about-subtitle">Quem é o Antonio Dev?</h2>
-                    <span class="about-profession">Desenvolvedor Front-End</span>
-                    <p class="about-text">Sou um desenvolvedor frontend júnior em constante evolução, apaixonado por criar interfaces web intuitivas e visualmente atraentes.
-                        Com [3] meses de experiência na área, estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades.
-
-                        Durante minha trajetória, tenho me dedicado a estudar e aplicar as tecnologias do mercado de desenvolvimento web, como HTML5, CSS3, JavaScript.                         
-                        Sou uma pessoa proativa, organizada e que busca sempre entregar o melhor resultado. Tenho espírito de equipe e sou aberto a 
-                        aprender com meus colegas e mentores. Acredito que a colaboração é fundamental para o sucesso de qualquer projeto. 
-                        Sou acadêmico do 2º período de análises e desenvolvimento de sistemas na Univali.<br><br>
-                        
-                        Fora do mundo da programação, sou pai, marido, leitor e curioso por notícias do mundo tech e do geral também. 
-                        Acredito que o equilíbrio entre vida pessoal e profissional é essencial para manter a criatividade e a produtividade em alta.
-                        Estou ansioso para fazer parte de projetos desafiadores e que me permitam crescer como profissional.
-                        Se você busca um desenvolvedor frontend dedicado e com comprometimento no trabalho e no aprendizar constante entre em contato comigo!</p>
-
-                    <div class="about-social">
-                        <a href="https://www.linkedin.com/in/antonio-jdev/" class="about-social-icon"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/settings/profile" class="about-social-icon"><i class='bx bxl-github'></i></a>
-                        <a href="https://www.instagram.com/oantoniojrs/" class="about-social-icon"><i class='bx bxl-instagram'></i></a>
-                    </div>
-                </div>   
-            </div>
-        </section>
-
-        <section class="skills section" id="habilidades">
-            <h2 class="section-title">Habilidades</h2>
-
-            <div class="skills-container bd-grid">
-                <div class="skills-box">
-                    <h3 class="skils-subtitle">Desenvolvimento</h3>
-
-                    <span class="skills-name">HTML</span>
-                    <span class="skills-name">CSS</span>
-                    <span class="skills-name">JAVASCRIPT</span>
-                    
-                    <h3 class="skils-subtitle">Cursos e certificações</h3>
-                    <span class="skills-name">Curso de Algorítmo - Curso em vídeo - 40 horas. [Cursando]</span>
-                    <span class="skills-name">Dev Quest Full-Stack - Dev em Dobro - 80 horas. [Cursando]</span>
-                    <span class="skills-name">Curso superior de Análises e Desenvolvimento de sistemas - [Cursando].</span>
-                    
-                    
-
-                    
-                </div>
-
-                <div class="skills-img">
-                    <img src="https://i.postimg.cc/fL7Z1bFw/skill.jpg" alt="skills image">
-                </div>
-            </div>
-        </section>
-
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">Portfolio</h2>
-
-            <div class="portfolio-container bd-grid">
-                <div class="portfolio-img">
-                    <img src="https://i.postimg.cc/c4LgMqgK/work1.jpg" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="./images/Cap-tela-app-tempo.png" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="https://antonio-jdev.github.io/projeto-tempo/" class="portfolio-link-name">App de previsão do tempo</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="https://i.postimg.cc/wjS1p7WJ/work3.jpg" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="https://i.postimg.cc/N0m5fBVn/work4.jpg" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="https://i.postimg.cc/vHTTxWkf/work5.jpg" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-img">
-                    <img src="https://i.postimg.cc/cHT1rHcF/work6.jpg" alt="work image">
-
-                    <div class="portfolio-link">
-                        <a href="#" class="portfolio-link-name">View Details</a>
-                    </div>
-                </div>
-
-            </div>
-        </section> 
-
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Meios de contato</h2>
-
-            <div class="contact-container bd-grid">
-                <div class="contact-info">
-                    <h3 class="contact-subtitle">EMAIL</h3>
-                    <span class="contact-text">antoniojrtech@gmail.com</span>
-
-                    <h3 class="contact-subtitle">CELULAR</h3>
-                    <span class="contact-text">+55 47 996362471</span>
-
-                    <h3 class="contact-subtitle">ENDEREÇO</h3>
-                    <span class="contact-text">Dom bosco, Itajaí-SC, Brasil</span>
-                </div>
-
-                <form action="" class="contact-form">
-                    <div class="contact-inputs">
-                        <input type="text" placeholder="Name" class="contact-input">
-                        <input type="email" placeholder="Email" class="contact-input">
-                    </div>
-
-                    <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
-
-                    <input type="submit" value="Enviar" class="contact-button">
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer section">
-        <div class="footer-container bd-grid">
-            <div class="footer-data">
-                <h2 class="footer-title">Cordialmente</h2>
-                <p class="footer-text">Obrigado por visualizar.</p>
-            </div>
-
-            <div class="footer-data">
-                <h2 class="footer-title">Navegue pela página</h2>
-                <ul>
-                    <li><a href="#home" class="footer-link">Início</a></li>
-                    <li><a href="#about" class="footer-link">Sobre</a></li>
-                    <li><a href="#skills" class="footer-link">Habilidades</a></li>
-                    <li><a href="#portfolio" class="footer-link">Portifólio</a></li>
-                    <li><a href="#contact" class="footer-link">Contatos</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-data">
-                <h2 class="footer-title">Redes Sociais</h2>
-
-                <a href="https://www.instagram.com/oantoniojrs/" class="footer-social"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/JuninhoSantos2" class="footer-social"><i class='bx bxl-facebook'></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-</body>
+  <body class="bg-gray-900 text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
