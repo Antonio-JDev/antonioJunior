@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="800" height="275" alt="Print do Portfólio" src="assets/images/print-portfolio.png" />
+  <img width="800" height="400" alt="Print do Portfólio" src="public/assets/images/print-portfolio.png" />
 </div>
 
 # Portfólio Pessoal - Antonio Junior dos Santos
