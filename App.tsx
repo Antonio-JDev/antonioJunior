@@ -12,7 +12,7 @@ const personalData = {
   name: "Antonio Junior dos Santos",
   role: "Desenvolvedor Full-Stack",
   impactPhrase: "Construindo soluções digitais inovadoras do back-end ao front-end.",
-  avatarUrl: "assets/images/foto-perfil.png",
+  avatarUrl: "/portfolio-01/assets/images/foto-perfil.png",
   about: "Sou um desenvolvedor apaixonado por tecnologia e por criar aplicações web eficientes e escaláveis. Com experiência em todo o ciclo de desenvolvimento, tenho um perfil proativo e colaborativo, sempre focado em transformar ideias em realidade. Minha experiência no setor administrativo me concedeu uma visão de regra de negócios onde consigo levantar requisitos entender a necessidade do cliente e adaptar o pensamento analítico para implementar uma solução utilizando as minhas ferramentas de desenvolvimento.  Estou cursando o 3° periodo de Análises e desenvolvimento de sistemas e venho desenvolvendo desde que iniciei os estudos. Sempre buscando ampliar meus conhecimentos para entregar soluções que trarão acessibilidade no ambiente de trabalho. ",
   contact: {
     email: "antoniojrtech@gmail.com",
