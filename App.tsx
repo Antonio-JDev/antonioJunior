@@ -1,10 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
+import FloatingButtons from './components/FloatingButtons';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import SkillsPage from './pages/SkillsPage';
 import { type Skill, type Project, type SkillCategory } from './types';
 
 
@@ -13,6 +14,7 @@ const personalData = {
   role: "Desenvolvedor Full-Stack",
   impactPhrase: "Construindo soluções digitais inovadoras do back-end ao front-end.",
   avatarUrl: "/portfolio-01/assets/images/foto-perfil.png",
+  cvUrl: "/portfolio-01/assets/cv/cv-antonio-junior.pdf",
   about: "Sou um desenvolvedor apaixonado por tecnologia e por criar aplicações web eficientes e escaláveis. Com experiência em todo o ciclo de desenvolvimento, tenho um perfil proativo e colaborativo, sempre focado em transformar ideias em realidade. Minha experiência no setor administrativo me concedeu uma visão de regra de negócios onde consigo levantar requisitos entender a necessidade do cliente e adaptar o pensamento analítico para implementar uma solução utilizando as minhas ferramentas de desenvolvimento.  Estou cursando o 3° periodo de Análises e desenvolvimento de sistemas e venho desenvolvendo desde que iniciei os estudos. Sempre buscando ampliar meus conhecimentos para entregar soluções que trarão acessibilidade no ambiente de trabalho. ",
   contact: {
     email: "antoniojrtech@gmail.com",
@@ -97,21 +99,34 @@ const projectsData: Project[] = [
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen w-full">
-      <Header />
-      <main className="container mx-auto px-6 md:px-12">
-        <Hero 
-          name={personalData.name} 
-          role={personalData.role} 
-          impactPhrase={personalData.impactPhrase} 
-          avatarUrl={personalData.avatarUrl}
-        />
-        <About content={personalData.about} />
-        <Skills skills={skillsData} />
-        <Projects projects={projectsData} />
-        <Contact contactInfo={personalData.contact} name={personalData.name}/>
-      </main>
-    </div>
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen w-full">
+        <Header />
+        <FloatingButtons socialLinks={personalData.contact} />
+        <main>
+          <Routes>
+            <Route 
+              path="/portfolio-01/" 
+              element={
+                <Home 
+                  personalData={personalData} 
+                  projects={projectsData} 
+                />
+              } 
+            />
+            <Route 
+              path="/portfolio-01/sobre" 
+              element={<AboutPage content={personalData.about} />} 
+            />
+            <Route 
+              path="/portfolio-01/habilidades" 
+              element={<SkillsPage skills={skillsData} />} 
+            />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 };
 

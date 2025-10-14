@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,36 +14,37 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'Sobre' },
-    { href: '#skills', label: 'Habilidades' },
-    { href: '#projects', label: 'Projetos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '/portfolio-01/', label: 'Início' },
+    { href: '/portfolio-01/sobre', label: 'Sobre' },
+    { href: '/portfolio-01/habilidades', label: 'Habilidades' },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const isActive = (path: string) => {
+    if (path === '/portfolio-01/') {
+      return location.pathname === '/portfolio-01/' || location.pathname === '/portfolio-01';
     }
+    return location.pathname === path;
   };
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
-        <a href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">
+        <Link to="/portfolio-01/" className="text-xl font-bold text-white hover:text-cyan-400 transition-colors">
           &lt;AJ /&gt;
-        </a>
+        </Link>
         <nav className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.href} 
-              href={link.href} 
-              onClick={(e) => handleNavClick(e, link.href)}
-              className="text-gray-300 hover:text-cyan-400 font-medium transition-colors"
+              to={link.href}
+              className={`font-medium transition-colors ${
+                isActive(link.href) 
+                  ? 'text-cyan-400' 
+                  : 'text-gray-300 hover:text-cyan-400'
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
         {/* Mobile menu could be added here if needed */}
