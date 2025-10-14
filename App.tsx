@@ -62,6 +62,14 @@ const skillsData: Record<SkillCategory, Skill[]> = {
 
 const projectsData: Project[] = [
   {
+    title: "Sistema de Gestão S3E Engenharia",
+    description: "Sistema completo de gestão para empresas de engenharia, incluindo gestão de obras, controle de compras, gerenciamento de estoque e equipes, CRM de clientes e fornecedores, além de módulos especializados para orçamentos e criação de projetos elétricos.",
+    imageUrl: "/portfolio-01/assets/images/S3e-system-pro.png",
+    tags: ["TypeScript", "React", "Node.js", "Express", "Prisma", "PostgreSQL"],
+    status: "em desenvolvimento",
+    progress: 60
+  },
+  {
     title: "App de Previsão do Tempo",
     description: "Uma aplicação simples para consultar o clima de uma cidade em tempo real, utilizando uma API de previsão do tempo para fornecer dados como umidade e velocidade do vento.",
     imageUrl: "/portfolio-01/assets/images/App-tempo.png",

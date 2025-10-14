@@ -9,7 +9,9 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   tags: string[];
+  status?: 'em desenvolvimento' | 'concluído';
+  progress?: number;
 }
