@@ -1,0 +1,18 @@
+/* Estilos globais do portfólio */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827; /* bg-gray-900 */
+  color: #e5e7eb; /* text-gray-200 */
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
