@@ -9,7 +9,7 @@ interface HeroProps {
   cvUrl?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ name, role, impactPhrase, avatarUrl, cvUrl = '/portfolio-01/assets/cv/cv-antonio-junior.pdf' }) => {
+const Hero: React.FC<HeroProps> = ({ name, role, impactPhrase, avatarUrl, cvUrl = '/portfolio-01/assets/cv/CV-Antonio-junior-FullStack.pdf' }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const targetElement = document.querySelector(targetId);

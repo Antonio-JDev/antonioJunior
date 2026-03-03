@@ -11,12 +11,14 @@
 Este projeto tem como objetivo centralizar e apresentar meus principais projetos, experiências e competências técnicas de forma visual e acessível. O portfólio é responsivo, com animações e navegação fluida, e pode ser facilmente adaptado para outros profissionais de tecnologia.
 
 ### Principais Funcionalidades
+
 - Seção "Sobre mim" com resumo profissional
 - Listagem de projetos com links para repositórios e demonstrações
 - Exibição de habilidades técnicas separadas por categoria
 - Contatos e links para redes sociais
 
 ## Tecnologias Utilizadas
+
 - React
 - TypeScript
 - Vite
