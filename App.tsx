@@ -30,20 +30,22 @@ const skillsData: Record<SkillCategory, Skill[]> = {
     { name: 'TypeScript' },
     { name: 'JavaScript (ES6+)' },
     { name: 'HTML5' },
-    { name: 'CSS3 & Tailwind' },
+    { name: 'CSS3 & TailwindCss' },
     { name: 'Next.js' },
   ],
   'Backend': [
     { name: 'Node.js' },
     { name: 'Express.js' },
-    { name: 'REST APIs' },
+    { name: 'APIs' },
+    { name: 'Api RestFull' },
+    { name: 'Nest.js' },
   ],
   'Banco de Dados': [
     { name: 'PostgreSQL' },
     { name: 'MongoDB' },
     { name: 'SQL' },
     { name: 'Redis' },
-    { name: 'Prisma' },
+    { name: 'PrismaORM' },
   ],
   'Ferramentas': [
     { name: 'Git & GitHub' },
@@ -51,9 +53,11 @@ const skillsData: Record<SkillCategory, Skill[]> = {
     { name: 'VS Code' },
     { name: 'Vite' },
     { name: 'CI/CD' },
+    { name: 'Vitest' },
+    { name: 'Jest' }
   ],
   'Análise & Suporte': [
-    { name: 'Modelagem de Dados (ER, DER, MER)' },
+    { name: 'Modelagem de Dados (DER, MER)' },
     { name: 'Levantamento de Requisitos' },
     { name: 'Pensamento Analítico' },
     { name: 'Windows & Suporte Técnico' },
@@ -65,15 +69,15 @@ const skillsData: Record<SkillCategory, Skill[]> = {
 const projectsData: Project[] = [
   {
     title: "Sistema de Gestão S3E Engenharia",
-    description: "Sistema completo de gestão para empresas de engenharia, incluindo gestão de obras, controle de compras, gerenciamento de estoque e equipes, CRM de clientes e fornecedores, além de módulos especializados para orçamentos e criação de projetos elétricos.",
+    description: "Sistema completo de gestão para a empresa S3E Engenharia Elétrica, incluindo gestão de obras através de metodologia agil um kaban para gestao de atividades e execuções de campo, controle de compras, gerenciamento de estoque e equipes, CRM de clientes e fornecedores, além de módulos especializados para orçamentos e criação de projetos elétricos.",
     imageUrl: "/portfolio-01/assets/images/S3e-system-pro.png",
-    tags: ["TypeScript", "React", "Node.js", "Express", "Prisma", "PostgreSQL"],
-    status: "em desenvolvimento",
+    tags: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Prisma", ],
+    status: "concluido",
     progress: 60
   },
   {
     title: "App de Previsão do Tempo",
-    description: "Uma aplicação simples para consultar o clima de uma cidade em tempo real, utilizando uma API de previsão do tempo para fornecer dados como umidade e velocidade do vento.",
+    description: "Uma aplicação simples para consultar o clima de uma cidade em tempo real, utilizando o consumo de dados da API openWhater de previsão do tempo para fornecer dados como umidade e velocidade do vento.",
     imageUrl: "/portfolio-01/assets/images/App-tempo.png",
     githubUrl: "https://github.com/Antonio-JDev/projeto-tempo",
     liveUrl: "https://antonio-jdev.github.io/projeto-tempo/",
@@ -85,7 +89,7 @@ const projectsData: Project[] = [
     imageUrl: "/portfolio-01/assets/images/S3e-engenharia.png",
     githubUrl: "https://github.com/Antonio-JDev/S3E-engenharia-WebSite",
     liveUrl: "https://s3eengenharia.com.br/",
-    tags: ["HTML5", "CSS3", "JavaScript"]
+    tags: ["HTML5", "CSS3", "tailwindCss", "JavaScript"]
   },
   {
     title: "PD Gesso & Drywall Website",
