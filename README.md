@@ -1,49 +1,36 @@
-<div align="center">
-  <img width="800" height="400" alt="Print do Portfólio" src="public/assets/images/print-portfolio.png" />
-</div>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Portfólio Pessoal - Antonio Junior dos Santos
+## Getting Started
 
-> Um portfólio moderno desenvolvido em React + TypeScript para apresentar meus projetos, habilidades e informações de contato como desenvolvedor Full-Stack.
+First, run the development server:
 
-## Sobre o Projeto
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Este projeto tem como objetivo centralizar e apresentar meus principais projetos, experiências e competências técnicas de forma visual e acessível. O portfólio é responsivo, com animações e navegação fluida, e pode ser facilmente adaptado para outros profissionais de tecnologia.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Principais Funcionalidades
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Seção "Sobre mim" com resumo profissional
-- Listagem de projetos com links para repositórios e demonstrações
-- Exibição de habilidades técnicas separadas por categoria
-- Contatos e links para redes sociais
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Tecnologias Utilizadas
+## Learn More
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Node.js (para ambiente de desenvolvimento)
+To learn more about Next.js, take a look at the following resources:
 
-## Como Executar Localmente
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Pré-requisitos:** Node.js
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Execute o app:
-   ```bash
-   npm run dev
-   ```
-3. Acesse no navegador o endereço exibido no terminal (ex: http://localhost:5173)
+## Deploy on Vercel
 
-## Deploy
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-O deploy deste portfólio é feito no GitHub Pages, disponível em:
-https://antonio-jdev.github.io/portfolio-01/
-
-## Licença
-
-Este projeto é open-source e pode ser utilizado e adaptado livremente.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
