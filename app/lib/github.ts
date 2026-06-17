@@ -32,25 +32,30 @@ export type GithubProfileData = {
   stack: string[];
 };
 
-export async function getGithubProfileData(): Promise<GithubProfileData> {
-  const username = process.env.GITHUB_USERNAME || "antoniojunior";
+function getGithubHeaders(): HeadersInit {
   const headers: HeadersInit = {
     Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
   };
 
-  if (process.env.GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  const token = process.env.GITHUB_TOKEN;
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
   }
 
+  return headers;
+}
+
+export async function getGithubProfileData(): Promise<GithubProfileData> {
+  const username = process.env.GITHUB_USERNAME || "antoniojunior";
+  const headers = getGithubHeaders();
+  const fetchOptions = process.env.GITHUB_TOKEN
+    ? { headers, next: { revalidate: 21600 } as const }
+    : { headers, cache: "no-store" as const };
+
   const [profileResponse, reposResponse] = await Promise.all([
-    fetch(`https://api.github.com/users/${username}`, {
-      headers,
-      next: { revalidate: 21600 },
-    }),
-    fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`, {
-      headers,
-      next: { revalidate: 21600 },
-    }),
+    fetch(`https://api.github.com/users/${username}`, fetchOptions),
+    fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`, fetchOptions),
   ]);
 
   if (!profileResponse.ok) {

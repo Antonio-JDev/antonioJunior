@@ -7,6 +7,7 @@ export type ProjectDocument = {
   linkGithub: string;
   linkDeploy: string;
   technologies: string[];
+  displayDate: string;
 };
 
 const ProjectSchema = new Schema<ProjectDocument>(
@@ -17,6 +18,7 @@ const ProjectSchema = new Schema<ProjectDocument>(
     linkGithub: { type: String, required: true, trim: true },
     linkDeploy: { type: String, required: true, trim: true },
     technologies: [{ type: String, required: true, trim: true }],
+    displayDate: { type: String, default: "", trim: true },
   },
   { timestamps: true }
 );

@@ -1,4 +1,4 @@
-import { createProject, listProjects } from "@/app/lib/projects";
+import { deleteProject, updateProject } from "@/app/lib/projects";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
@@ -26,13 +26,14 @@ function isValid(body: BodyInput) {
   );
 }
 
-export async function GET() {
-  const projects = await listProjects();
-  return NextResponse.json(projects);
-}
+type RouteContext = {
+  params: Promise<{ id: string }>;
+};
 
-export async function POST(request: Request) {
+export async function PUT(request: Request, context: RouteContext) {
+  const { id } = await context.params;
   const body = (await request.json()) as BodyInput;
+
   if (body.adminPassword !== process.env.ADMIN_PASSWORD) {
     return NextResponse.json({ message: "Acesso negado." }, { status: 401 });
   }
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "Payload invalido." }, { status: 400 });
   }
 
-  const project = await createProject({
+  const project = await updateProject(id, {
     title: body.title!,
     description: body.description!,
     imageUrl: body.imageUrl!,
@@ -51,5 +52,21 @@ export async function POST(request: Request) {
     displayDate: body.displayDate?.trim() || "",
   });
 
-  return NextResponse.json(project, { status: 201 });
+  if (!project) {
+    return NextResponse.json({ message: "Projeto nao encontrado." }, { status: 404 });
+  }
+
+  return NextResponse.json(project);
+}
+
+export async function DELETE(request: Request, context: RouteContext) {
+  const { id } = await context.params;
+  const body = (await request.json()) as { adminPassword?: string };
+
+  if (body.adminPassword !== process.env.ADMIN_PASSWORD) {
+    return NextResponse.json({ message: "Acesso negado." }, { status: 401 });
+  }
+
+  await deleteProject(id);
+  return NextResponse.json({ message: "Projeto removido." });
 }

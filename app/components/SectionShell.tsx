@@ -9,7 +9,7 @@ export function SectionShell({ id, title, subtitle, children }: SectionShellProp
   return (
     <section
       id={id}
-      className="rounded-3xl border border-border/90 bg-card/95 p-6 shadow-[0_0_40px_rgba(29,78,216,0.15)] sm:p-8"
+      className="section-surface rounded-2xl border border-white/[0.05] bg-white/[0.015] p-6 backdrop-blur-sm sm:p-8"
     >
       <header className="mb-6">
         <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

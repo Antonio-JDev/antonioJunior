@@ -6,9 +6,8 @@ import { useEffect, useState } from "react";
 const navItems = [
   { href: "#banner", label: "Inicio" },
   { href: "#sobre", label: "Sobre" },
-  { href: "#experiencias", label: "Experiencias" },
   { href: "#formacao", label: "Formacao" },
-  { href: "#skills", label: "Skills" },
+  { href: "#skills", label: "Stack" },
   { href: "#projetos", label: "Projetos" },
   { href: "#contato", label: "Contato" },
 ];
@@ -54,7 +53,7 @@ export function HeaderNav() {
   }, []);
 
   return (
-    <header className="sticky top-3 z-30 rounded-2xl border border-border/80 bg-background/70 px-3 py-2 backdrop-blur-xl">
+    <header className="sticky top-3 z-30 rounded-2xl border border-white/[0.06] bg-background/55 px-3 py-2 backdrop-blur-xl">
       <nav className="flex items-center justify-between gap-3">
         <a
           href="#banner"
@@ -71,12 +70,12 @@ export function HeaderNav() {
         >
           {menuOpen ? <HiOutlineX className="text-xl" /> : <HiOutlineMenuAlt3 className="text-xl" />}
         </button>
-        <div className="hidden gap-2 min-[765px]:flex min-[765px]:flex-wrap min-[765px]:justify-end">
+        <div className="hidden items-center gap-1 min-[765px]:flex min-[765px]:justify-end">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className={`whitespace-nowrap rounded-full px-2.5 py-1.5 text-xs transition sm:px-3 sm:text-sm ${activeSection === item.href ? "bg-background-soft text-foreground ring-1 ring-border" : "text-muted hover:bg-background-soft hover:text-foreground"}`}
+              className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs transition sm:text-sm ${activeSection === item.href ? "bg-white/[0.06] text-foreground" : "text-muted hover:bg-white/[0.04] hover:text-foreground"}`}
             >
               {item.label}
             </a>

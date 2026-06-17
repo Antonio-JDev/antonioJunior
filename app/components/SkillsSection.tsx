@@ -1,70 +1,22 @@
 import { SectionShell } from "@/app/components/SectionShell";
-import {
-  SiCss,
-  SiGithub,
-  SiGit,
-  SiHtml5,
-  SiJavascript,
-  SiMysql,
-  SiNodedotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiVuedotjs,
-} from "react-icons/si";
-
-type SkillsSectionProps = {
-  stack: string[];
-};
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  HTML5: SiHtml5,
-  CSS3: SiCss,
-  JavaScript: SiJavascript,
-  TypeScript: SiTypescript,
-  "Vue.js": SiVuedotjs,
-  "Node.js": SiNodedotjs,
-  MySQL: SiMysql,
-  Tailwind: SiTailwindcss,
-  Git: SiGit,
-  GitHub: SiGithub,
-};
+import { SkillsHub } from "@/app/components/SkillsHub";
 
 const softSkills = [
-  "Trabalho em equipe",
-  "Comunicacao",
-  "Resolucao de problemas",
-  "Aprendizado continuo",
-  "Organizacao",
-  "Adaptabilidade",
+  "Comunicacao tecnica e didatica",
+  "Pensamento analitico voltado a resolucao de problemas",
+  "Trabalho colaborativo em equipes ageis (Scrum/Kanban)",
+  "Adaptabilidade a novas tecnologias e ferramentas de IA",
+  "Senso de propriedade e foco em entrega de valor ao cliente",
 ];
 
-export function SkillsSection({ stack }: SkillsSectionProps) {
-  const baseStack = stack.length ? stack : ["HTML5", "CSS3", "JavaScript", "TypeScript", "Vue.js", "Node.js", "MySQL", "Tailwind", "Git", "GitHub"];
-  const marqueeItems = [...baseStack, ...baseStack];
-
+export function SkillsSection() {
   return (
-    <SectionShell id="skills" title="O que eu domino" subtitle="Ferramentas e competencias para entregar valor">
-      <div className="space-y-6">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-background-soft py-5">
-          <div className="skills-fade-left pointer-events-none absolute inset-y-0 left-0 z-10 w-20" />
-          <div className="skills-fade-right pointer-events-none absolute inset-y-0 right-0 z-10 w-20" />
-          <div className="skills-marquee-track flex min-w-max gap-3 px-4">
-            {marqueeItems.map((skill, index) => {
-              const Icon = iconMap[skill] || SiGithub;
-              return (
-                <div key={`${skill}-${index}`} className="skills-tech-card hover-lift">
-                  <span className="skills-tech-icon">
-                    <Icon className="text-lg text-accent" />
-                  </span>
-                  <span className="skills-tech-label">{skill}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+    <SectionShell id="skills" title="O que eu domino" subtitle="Stack tecnologica conectada ao meu fluxo de entrega">
+      <div className="space-y-8">
+        <SkillsHub />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {softSkills.map((skill) => (
-            <div key={skill} className="hover-lift rounded-xl border border-border bg-background-soft p-4 text-muted">
+            <div key={skill} className="soft-skill-card text-muted">
               {skill}
             </div>
           ))}

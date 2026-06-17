@@ -1,5 +1,6 @@
 "use client";
 
+import { AdminField } from "@/app/components/admin/AdminField";
 import { useState } from "react";
 
 export function AdminLoginForm() {
@@ -27,22 +28,21 @@ export function AdminLoginForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-3 rounded-2xl border border-border bg-card p-6">
-      <h1 className="text-2xl font-bold">Acesso Admin</h1>
-      <p className="text-sm text-muted">Informe a senha para liberar o painel.</p>
-      <input
+    <form onSubmit={onSubmit} className="admin-panel-card grid max-w-md gap-4">
+      <div>
+        <h1 className="text-2xl font-bold text-white">Acesso Admin</h1>
+        <p className="mt-1 text-sm text-slate-300">Informe a senha para liberar o painel.</p>
+      </div>
+      <AdminField
+        label="Senha"
         type="password"
         value={password}
-        onChange={(event) => setPassword(event.target.value)}
+        onChange={setPassword}
+        placeholder="Digite ADMIN_PASSWORD"
         required
-        className="w-full rounded-xl border border-border bg-background-soft px-3 py-2 outline-none"
-        placeholder="ADMIN_PASSWORD"
       />
       {error ? <p className="text-sm text-red-300">{error}</p> : null}
-      <button
-        disabled={loading}
-        className="rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2 font-semibold text-white disabled:opacity-60"
-      >
+      <button type="submit" disabled={loading} className="admin-primary-btn w-fit disabled:opacity-60">
         {loading ? "Validando..." : "Entrar"}
       </button>
     </form>

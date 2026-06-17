@@ -14,8 +14,10 @@ const onest = Onest({
   display: "swap",
 });
 
+const siteUrl = "https://antonio-junior.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://antonio-jdev.github.io/portfolio-01"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Antonio Junior dos Santos | Desenvolvedor FullStack",
     template: "%s | Antonio Junior",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://antonio-jdev.github.io/portfolio-01/",
+    url: siteUrl,
     title: "Antonio Junior dos Santos | Desenvolvedor FullStack",
     description:
       "Desenvolvedor Full-Stack especializado em React.js, Node.js e TypeScript, com experiencia em APIs, IA, automacao e arquitetura escalavel.",

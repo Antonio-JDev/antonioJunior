@@ -1,6 +1,12 @@
-import Image from "next/image";
+import { ProjectCard } from "@/app/components/ProjectCard";
 import { SectionShell } from "@/app/components/SectionShell";
 import { listProjects } from "@/app/lib/projects";
+
+function formatProjectDate(project: { displayDate?: string; createdAt?: string }) {
+  if (project.displayDate?.trim()) return project.displayDate;
+  if (!project.createdAt) return "";
+  return new Date(project.createdAt).toLocaleDateString("pt-BR");
+}
 
 export async function ProjectsSection() {
   const projects = await listProjects();
@@ -12,32 +18,19 @@ export async function ProjectsSection() {
           Nenhum projeto cadastrado ainda. Acesse /admin para publicar o primeiro.
         </div>
       ) : (
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="projects-grid">
           {projects.map((project) => (
-            <article key={project.title} className="hover-lift overflow-hidden rounded-2xl border border-border bg-background-soft">
-              <div className="relative h-44">
-                <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
-              </div>
-              <div className="space-y-3 p-4">
-                <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                <p className="text-sm text-muted">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={`${project.title}-${tech}`} className="rounded-full border border-border px-3 py-1 text-xs text-muted">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex items-center gap-3 pt-1 text-sm font-semibold">
-                  <a href={project.linkGithub} target="_blank" rel="noreferrer" className="text-primary hover:underline">
-                    GitHub
-                  </a>
-                  <a href={project.linkDeploy} target="_blank" rel="noreferrer" className="text-accent hover:underline">
-                    Deploy
-                  </a>
-                </div>
-              </div>
-            </article>
+            <ProjectCard
+              key={String(project._id)}
+              id={String(project._id)}
+              title={project.title}
+              description={project.description}
+              imageUrl={project.imageUrl}
+              linkGithub={project.linkGithub}
+              linkDeploy={project.linkDeploy}
+              technologies={project.technologies}
+              dateLabel={formatProjectDate(project)}
+            />
           ))}
         </div>
       )}
