@@ -51,7 +51,7 @@ export function HeroSection({ profile, settings }: HeroSectionProps) {
               <a href="https://github.com/Antonio-JDev" target="_blank" rel="noreferrer" aria-label="GitHub" className="hero-social-btn-premium">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/antonio-junior/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hero-social-btn-premium">
+              <a href="https://linkedin.com/in/antonio-jdev/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hero-social-btn-premium">
                 <FaLinkedinIn />
               </a>
               <a href="mailto:antoniojrtech@gmail.com" aria-label="Email" className="hero-social-btn-premium">

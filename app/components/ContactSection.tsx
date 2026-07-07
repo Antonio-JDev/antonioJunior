@@ -20,7 +20,7 @@ const contacts: ContactItem[] = [
     glow: "rgba(226, 232, 240, 0.55)",
   },
   {
-    href: "https://www.linkedin.com/in/antonio-junior/",
+    href: "https://linkedin.com/in/antonio-jdev/",
     label: "LinkedIn",
     detail: "antonio-junior",
     Icon: FaLinkedinIn,
