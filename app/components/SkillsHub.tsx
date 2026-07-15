@@ -223,9 +223,9 @@ function SkillsOrbitDesktop({
               x2={path.cardX}
               y2={path.cardY}
             >
-              <stop offset="0%" stopColor="rgba(56, 189, 248, 0.55)" />
-              <stop offset="45%" stopColor="rgba(59, 130, 246, 0.28)" />
-              <stop offset="100%" stopColor="rgba(147, 197, 253, 0.1)" />
+              <stop offset="0%" stopColor="rgba(212, 175, 55, 0.55)" />
+              <stop offset="45%" stopColor="rgba(248, 224, 138, 0.28)" />
+              <stop offset="100%" stopColor="rgba(212, 175, 55, 0.1)" />
             </linearGradient>
           ))}
         </defs>

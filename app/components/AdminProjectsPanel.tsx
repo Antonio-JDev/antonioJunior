@@ -13,6 +13,9 @@ type ProjectItem = {
   linkDeploy: string;
   technologies: string[];
   displayDate: string;
+  problem?: string;
+  solution?: string;
+  result?: string;
   createdAt?: string;
 };
 
@@ -24,6 +27,9 @@ type ProjectFormState = {
   linkDeploy: string;
   technologies: string;
   displayDate: string;
+  problem: string;
+  solution: string;
+  result: string;
 };
 
 const emptyForm: ProjectFormState = {
@@ -34,6 +40,9 @@ const emptyForm: ProjectFormState = {
   linkDeploy: "",
   technologies: "",
   displayDate: "",
+  problem: "",
+  solution: "",
+  result: "",
 };
 
 function formatProjectDate(project: ProjectItem) {
@@ -81,6 +90,9 @@ export function AdminProjectsPanel() {
       linkDeploy: project.linkDeploy,
       technologies: project.technologies.join(", "),
       displayDate: project.displayDate || "",
+      problem: project.problem || "",
+      solution: project.solution || "",
+      result: project.result || "",
     });
     setStatus("");
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -188,6 +200,33 @@ export function AdminProjectsPanel() {
             onChange={(v) => updateField("technologies", v)}
             required
             placeholder="React, Node.js, MongoDB"
+          />
+          <AdminField
+            label="Problema"
+            description="Desafio de negocio que o projeto resolve."
+            value={form.problem}
+            onChange={(v) => updateField("problem", v)}
+            multiline
+            rows={2}
+            placeholder="Controle manual de obras..."
+          />
+          <AdminField
+            label="Solucao"
+            description="O que foi desenvolvido."
+            value={form.solution}
+            onChange={(v) => updateField("solution", v)}
+            multiline
+            rows={2}
+            placeholder="ERP completo..."
+          />
+          <AdminField
+            label="Resultado"
+            description="Impacto gerado para o cliente."
+            value={form.result}
+            onChange={(v) => updateField("result", v)}
+            multiline
+            rows={2}
+            placeholder="Centralizacao dos processos..."
           />
           <AdminPasswordField value={adminPassword} onChange={setAdminPassword} />
 

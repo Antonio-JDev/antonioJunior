@@ -88,7 +88,7 @@ export function HeroFlowLines() {
             key={`arc-${index}`}
             d={d}
             fill="none"
-            stroke="rgba(56,189,248,0.12)"
+            stroke="rgba(212,175,55,0.14)"
             strokeWidth="0.6"
             strokeLinecap="round"
             vectorEffect="non-scaling-stroke"
@@ -102,7 +102,7 @@ export function HeroFlowLines() {
                 key={`path-${networkIndex}-${pathIndex}`}
                 d={d}
                 fill="none"
-                stroke="rgba(56,189,248,0.2)"
+                stroke="rgba(212,175,55,0.22)"
                 strokeWidth="0.65"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -115,7 +115,7 @@ export function HeroFlowLines() {
                 cx={cx}
                 cy={cy}
                 r="1.6"
-                fill="rgba(56,189,248,0.38)"
+                fill="rgba(248,224,138,0.4)"
               />
             ))}
           </g>

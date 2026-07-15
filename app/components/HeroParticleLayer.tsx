@@ -17,7 +17,7 @@ export function HeroParticleLayer() {
           patternUnits="userSpaceOnUse"
           patternTransform="translate(16,16)"
         >
-          <circle cx="16" cy="16" r="1" fill="rgba(56,189,248,0.2)" />
+          <circle cx="16" cy="16" r="1" fill="rgba(212,175,55,0.18)" />
         </pattern>
         <linearGradient id="hero-particle-fade" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="white" stopOpacity="1" />

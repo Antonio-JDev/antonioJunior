@@ -8,6 +8,9 @@ export type ProjectDocument = {
   linkDeploy: string;
   technologies: string[];
   displayDate: string;
+  problem?: string;
+  solution?: string;
+  result?: string;
 };
 
 const ProjectSchema = new Schema<ProjectDocument>(
@@ -19,6 +22,9 @@ const ProjectSchema = new Schema<ProjectDocument>(
     linkDeploy: { type: String, required: true, trim: true },
     technologies: [{ type: String, required: true, trim: true }],
     displayDate: { type: String, default: "", trim: true },
+    problem: { type: String, default: "", trim: true },
+    solution: { type: String, default: "", trim: true },
+    result: { type: String, default: "", trim: true },
   },
   { timestamps: true }
 );

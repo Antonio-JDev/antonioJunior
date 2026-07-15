@@ -4,6 +4,7 @@ import { HeroParticleLayer } from "@/app/components/HeroParticleLayer";
 export function PageBackdrop() {
   return (
     <div className="page-backdrop" aria-hidden="true">
+      <div className="page-backdrop-grid" />
       <div className="page-backdrop-hero-fx">
         <div className="hero-particle-layer">
           <HeroParticleLayer />

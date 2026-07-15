@@ -19,46 +19,41 @@ const siteUrl = "https://antonio-junior.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Antonio Junior dos Santos | Desenvolvedor FullStack",
-    template: "%s | Antonio Junior",
+    default: "AJ Software & Consultoria | Soluções Digitais",
+    template: "%s | AJ Software & Consultoria",
   },
   description:
-    "Portfólio de Antonio Junior dos Santos - Desenvolvedor Full-Stack especializado em React.js, Node.js e TypeScript, com foco em solucoes digitais de alto impacto.",
+    "AJ Software & Consultoria — softwares sob medida, MCP Servers, APIs, automações inteligentes e soluções com Inteligência Artificial para empresas.",
   keywords: [
-    "desenvolvedor",
-    "fullstack",
-    "frontend",
-    "react",
-    "next.js",
-    "typescript",
-    "javascript",
-    "node.js",
-    "express",
-    "tailwindcss",
-    "postgresql",
-    "mongodb",
-    "prisma",
-    "docker",
-    "n8n",
-    "llm",
-    "portfolio",
-    "engenharia de requisitos",
+    "software sob medida",
+    "MCP servers",
+    "inteligência artificial",
+    "automações",
+    "APIs REST",
+    "integrações",
+    "consultoria",
+    "ERP",
+    "dashboards",
+    "AJ Software",
+    "quanto custa um software",
+    "desenvolvimento de aplicativos",
+    "FAQ software",
   ],
-  authors: [{ name: "Antonio Junior dos Santos" }],
+  authors: [{ name: "AJ Software & Consultoria" }],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    title: "Antonio Junior dos Santos | Desenvolvedor FullStack",
+    title: "AJ Software & Consultoria | Soluções Digitais",
     description:
-      "Desenvolvedor Full-Stack especializado em React.js, Node.js e TypeScript, com experiencia em APIs, IA, automacao e arquitetura escalavel.",
+      "Desenvolvemos softwares sob medida, servidores MCP, automações e soluções com IA para empresas que querem crescer com tecnologia.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Antonio Junior dos Santos - Desenvolvedor FullStack",
+        alt: "AJ Software & Consultoria",
       },
     ],
   },
@@ -66,17 +61,15 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/g.png", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png" }],
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/favicon.ico" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Antonio Junior dos Santos | Desenvolvedor FullStack",
+    title: "AJ Software & Consultoria | Soluções Digitais",
     description:
-      "Desenvolvedor Full-Stack especializado em React.js, Node.js e TypeScript, com experiencia em APIs, IA, automacao e arquitetura escalavel.",
+      "Softwares sob medida, MCP Servers, integrações e Inteligência Artificial para empresas.",
     images: ["/og-image.png"],
   },
 };
@@ -87,8 +80,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${geistSans.variable} ${onest.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="pt-BR" className={`${geistSans.variable} ${onest.variable} antialiased`}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }
